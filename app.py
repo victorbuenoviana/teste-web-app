@@ -4,6 +4,10 @@ import streamlit as st
 import plotly.express as px
 from datetime import datetime
 
+from subprocess import run
+comando = ["streamlit", "run", r"C:\Users\victo\OneDrive\Documentos\github\teste-web-app\app.py"]
+# execucao = run(comando)
+
 def tratar_dados_faltantes(df):
     df["Cliques no link únicos"].fillna(0, inplace=True)
     df["Custo por clique no link único"].fillna(0, inplace=True)
